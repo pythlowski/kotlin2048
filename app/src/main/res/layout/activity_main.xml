@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20sp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/mainLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="2048\nGAME"
+                android:textSize="40sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/scoreTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/score"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/topScoreTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/topScore"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/revertButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8sp"
+                        android:layout_marginRight="8sp"
+                        android:layout_weight="1"
+                        android:text="UNDO"
+                        android:textSize="12sp"
+                        app:iconGravity="textTop" />
+
+                    <Button
+                        android:id="@+id/resetButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8sp"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="1"
+                        android:text="NEW GAME"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/saveScoreLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/nicknameEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="nickname..."
+                android:inputType="textPersonName"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/saveScoreButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="SAVE\nSCORE"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#AAAAAA"
+            android:elevation="10dp"
+            android:paddingLeft="10px"
+            android:paddingTop="10px"
+            android:paddingRight="10px"
+            android:paddingBottom="10px">
+
+            <TableRow
+                android:id="@+id/tr1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10px"
+                android:layout_marginBottom="10px">
+
+                <TextView
+                    android:id="@+id/tile11"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=""
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/tile12"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:text=""
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/tile13"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=""
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/tile14"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=""
+                    android:textSize="26sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10px"
+                android:layout_marginBottom="10px">
+
+                <TextView
+                    android:id="@+id/tile21"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=""
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/tile22"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:text=""
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/tile23"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=""
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/tile24"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=""
+                    android:textSize="26sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10px"
+                android:layout_marginBottom="10px">
+
+                <TextView
+                    android:id="@+id/tile31"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=""
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/tile32"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:text=""
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/tile33"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=""
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/tile34"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=""
+                    android:textSize="26sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10px"
+                android:layout_marginBottom="10px">
+
+                <TextView
+                    android:id="@+id/tile41"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=""
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/tile42"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:text=""
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/tile43"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=""
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/tile44"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginStart="10px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginEnd="10px"
+                    android:layout_marginRight="10px"
+                    android:background="#DFDFDF"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=""
+                    android:textSize="26sp" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">2048game</string>
+    <string name="score">SCORE: %1$d</string>
+    <string name="topScore">TOP SCORE: %1$d</string>
+</resources>
